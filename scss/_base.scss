@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "FuturaBook";
+  src: url("./static/fonts/futurabookc-webfont.eot") format("eot");
+  src: url("./static/fonts/futurabookc-webfont.svg") format("svg"),
+    url("./static/fonts/futurabookc-webfont.ttf") format("ttf"),
+    url("./static/fonts/futurabookc-webfont.woff") format("woff"),
+    url("./static/fonts/futurabookc-webfont.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FuturaDemi";
+  src: url("./static/fonts/futurademic-webfont.eot") format("eot");
+  src: url("./static/fonts/futurademic-webfont.svg") format("svg"),
+    url("./static/fonts/futurademic-webfont.ttf") format("ttf"),
+    url("./static/fonts/futurademic-webfont.woff") format("woff"),
+    url("./static/fonts/futurademic-webfont.woff2") format("woff2");
+  font-display: swap;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  display: grid;
+  justify-content: center;
+  margin: 0 auto;
+  grid-template-columns: 160rem;
+  grid-template-rows: 81rem 44.5rem 43rem 72rem 57.5rem 13.3rem;
+
+  @include respond(desktop) {
+    grid-template-rows: 81rem 60rem 43rem 72rem 57.5rem 13.3rem;
+  }
+
+  @include respond(tablet) {
+    grid-template-rows: 65rem 60rem 32rem 57.5rem 13.3rem;
+  }
+
+  @include respond(mobile) {
+    grid-template-rows: 71rem 100rem 32rem 61rem 26.3rem;
+  }
+}
+
+.dignity {
+  background-color: #fff;
+}
+
+.functions {
+  background-color: #29d3d1;
+}
+
+.partners {
+  background-color: #fff;
+}
+
+.footer {
+  background-image: url(./static/images/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 100% 83%;
+
+  @include respond(mobile) {
+    background-position: center;
+    background-size: 80%;
+  }
+}
+
+section {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.visible {
+  opacity: 1;
+}

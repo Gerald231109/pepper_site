@@ -1,0 +1,102 @@
+.sales {
+  padding-top: 31.4rem;
+
+  @include respond(tablet) {
+    padding-top: 0;
+  }
+}
+
+.sales__content {
+  display: grid;
+  grid-template-columns: 55.5rem 1fr;
+  background-color: #edecec;
+  padding: 0 26.6rem;
+  max-height: 46.6rem;
+  position: relative;
+
+  @include respond(tablet) {
+    grid-template-columns: 1fr;
+    max-height: 100%;
+    background-color: #fff;
+  }
+}
+
+.sales__info {
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: 3rem;
+  text-align: left;
+  align-content: center;
+  padding-top: 6.8rem;
+  padding-bottom: 14.5rem;
+
+  @include respond(desktop) {
+    text-align: right;
+    justify-items: end;
+  }
+
+  @include respond(tablet) {
+    text-align: center;
+    justify-items: center;
+    row-gap: 2rem;
+    padding: 0;
+  }
+}
+
+.sales__title {
+  font-size: 3.2rem;
+  font-weight: bold;
+  font-family: "Montserrat";
+}
+
+.sales__text {
+  font-size: 2.4rem;
+  color: #000;
+  font-family: "FuturaBook";
+
+  @include respond(desktop) {
+    width: 50rem;
+  }
+
+  @include respond(tablet) {
+    line-height: 1.5;
+  }
+
+  @include respond(mobile) {
+    max-width: 35rem;
+  }
+}
+
+.phone__left {
+  background-image: url(./static/images/_phone3_1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 56.8rem;
+  width: 28.6rem;
+  z-index: 1;
+  position: absolute;
+  top: -15rem;
+  right: 49.5rem;
+
+  @include respond(tablet) {
+    display: none;
+  }
+}
+
+.phone__right {
+  background-image: url(./static/images/_phone3_2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 54.4rem;
+  width: 34.9rem;
+  align-self: start;
+  position: absolute;
+  top: -17rem;
+  right: 23rem;
+
+  @include respond(tablet) {
+    display: none;
+  }
+}

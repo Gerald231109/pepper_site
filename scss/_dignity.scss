@@ -1,0 +1,123 @@
+.dignity {
+  display: grid;
+  justify-items: center;
+  align-items: start;
+}
+
+.dignity__down {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  padding: 1.6rem 6rem;
+  border-radius: 1.5rem;
+  box-shadow: 1px 4px 24px 0 rgba(0, 0, 0, 0.35);
+  background-color: #29d3d1;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 1.4rem;
+  column-gap: 2.4rem;
+  font-weight: 600;
+  margin-top: -2.3rem;
+  animation: float 1s infinite ease-in-out alternate;
+  transition: box-shadow 0.2s ease-out, transform 0.2s ease-out;
+
+  &:active {
+    animation-play-state: paused;
+    box-shadow: 1px 4px 5px 0 rgba(0, 0, 0, 0.35);
+  }
+}
+
+.down__icon {
+  background-image: url(./static/svg/arrow_down.svg);
+  width: 2.7rem;
+  height: 1.2rem;
+}
+
+.dignity__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 3rem;
+  margin: 0 15.6rem;
+
+  @include respond(desktop) {
+    grid-template-columns: repeat(2, 30rem);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 7rem;
+  }
+
+  @include respond(mobile) {
+    grid-template-columns: 30rem;
+    grid-template-rows: repeat(4, min-content);
+    row-gap: 4rem;
+  }
+}
+
+.dignity__item {
+  display: grid;
+  grid-auto-flow: row;
+  text-align: center;
+  justify-items: center;
+  color: #000;
+  row-gap: 2.5rem;
+
+  @include respond(desktop) {
+    row-gap: 1rem;
+  }
+
+  @include respond(mobile) {
+    grid-template-rows: min-content min-content max-content;
+  }
+}
+
+.dignity__icon {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-self: start;
+  animation: jump 1s ease-in-out;
+}
+
+.best__icon {
+  background-image: url(./static/svg/like.svg);
+  height: 7rem;
+  width: 7.9rem;
+  animation-delay: 0s;
+}
+
+.near__icon {
+  background-image: url(./static/svg/geo.svg);
+  width: 5rem;
+  height: 7.5rem;
+  animation-delay: 0.2s;
+}
+
+.notif__icon {
+  background-image: url(./static/svg/bell.svg);
+  width: 5.4rem;
+  height: 7rem;
+  animation-delay: 0.4s;
+}
+
+.catalog__icon {
+  background-image: url(./static/svg/sheet.svg);
+  height: 6.6rem;
+  width: 6.6rem;
+  animation-delay: 0.6s;
+}
+
+.item__title {
+  font-size: 2.4rem;
+  font-family: "Montserrat";
+  font-weight: 600;
+}
+
+.item__text {
+  font-family: "FuturaDemi";
+  font-size: 1.8rem;
+
+  @include respond(mobile) {
+    font-size: 2rem;
+    align-self: end;
+  }
+}
