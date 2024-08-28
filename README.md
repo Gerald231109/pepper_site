@@ -1,1 +1,1 @@
-# pepper_site
+# Сборка scss производилась через VSCode/Live Sass Compiler
